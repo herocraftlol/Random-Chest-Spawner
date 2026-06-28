@@ -1,0 +1,6 @@
+name: RandomChestSpawner
+version: 1.0.0
+main: com.example.randomchest.RandomChestPlugin
+api-version: '1.21'
+description: Spawns chests with random obtainable items at random locations for online players
+author: Example
