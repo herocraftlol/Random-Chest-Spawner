@@ -1,13 +1,13 @@
 # RandomChestSpawner - Plugin Minecraft
 
-Un plugin Spigot/Paper qui fait apparaitre des coffres avec des objets aleatoires a des emplacements varies pour les joueurs en ligne.
+Un plugin Spigot/Paper qui fait apparaitre des coffres avec des objets aleatoires de differentes raretes.
 
 ## Fonctionnalites
 
-- **Apparition aleatoire de coffres**: Fait apparaitre un coffre avec 4 a 9 objets aleatoires (survie uniquement, sans spawn eggs)
-- **Distance centree**: Apparait au centre de tous les joueurs connectes, minimum 200 blocs
-- **Distance intelligente**: Maximum 2000 blocs (ou plus si les joueurs sont tres eloignes)
+- **Loot par rarete**: 4 tires (Commun, Rare, Epique, Legendaire) avec des chances differentes
+- **Anti-abus**: Limite le nombre d'items precieux par coffre
 - **Placement au sol**: Place les coffres **sur le sol** sur le bloc solide le plus haut (jamais en lair)
+- **Distance intelligente**: Minimum 200 blocs, maximum 2000 blocs du centre des joueurs
 - **Limites du monde**: Coordonnees limitees a -10000 et 10000 en X/Z
 - **Notifications chat**: Previens tous les joueurs quand un coffre apparait ou est vide
 - **Disparition apres pillage**: Le coffre disparait quand il est vide, notification visible par tous
@@ -15,6 +15,15 @@ Un plugin Spigot/Paper qui fait apparaitre des coffres avec des objets aleatoire
   - Intervalle aleatoire entre 20 et 35 minutes
   - Cycle qui fonctionne meme sans joueurs
   - Le coffre spawn uniquement quand des joueurs sont connectes
+
+## Raretes
+
+| Rareté | Chance | Quantité | Exemples |
+|--------|--------|----------|----------|
+| Commun | 58% | 16-64 | Pierre, bois, bouffe basique |
+| Rare | 30% | 4-16 | Fer, or, outils |
+| Epique | 9% | 1-4 | Diamant, disque de musique |
+| Legendaire | 3% | 1 | Netherite, Elytra, Totem |
 
 ## Requirements
 
@@ -39,7 +48,7 @@ Le JAR compile sera dans `target/RandomChestSpawner-1.0.0.jar`.
 
 - Le cycle de 20-35 minutes (aleatoire) tourne en permanence (meme sans joueurs)
 - Quand un joueur se connecte, il peut avoir de la chance et tomber sur un cycle imminent
-- Les coffres contiennent 4 a 9 objets aleatoires (survie uniquement, sans spawn eggs)
+- Les coffres contiennent 4-9 items de differentes raretes
 - Les coordonnees sont annoncees dans le chat
 - Le coffre disparait quand il est vide (pille) avec notification visible par tous
 - Le coffre spawn entre 200 et 2000 blocs du centre des joueurs
